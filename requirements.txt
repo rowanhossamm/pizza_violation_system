@@ -1,0 +1,5 @@
+ultralytics==8.0.26
+pika
+streamlit
+opencv-python
+numpy
