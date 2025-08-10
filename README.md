@@ -11,7 +11,7 @@ This project detects hygiene violations in a pizza store by monitoring if worker
 - Runs object detection using a pretrained YOLO model to detect hands, scoopers, pizza, and people.
 - Publishes detection results (bounding boxes, classes, confidence) to RabbitMQ queue `detection`.
 
-### 2. Violation Detection Service (`violationn_service.py`)
+### 2. Violation Detection Service (`violation_service.py`)
 - Subscribes to detection results from RabbitMQ.
 - Applies violation rules based on whether a hand is inside an ROI and holding a scooper.
 - Counts and logs violations.
