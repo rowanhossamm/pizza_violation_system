@@ -6,12 +6,12 @@ This project detects hygiene violations in a pizza store by monitoring if worker
 
 ## Implemented Components
 
-### 1. Detection Service (`detection.py`)
+### 1. Detection Service (`detection_service.py`)
 - Reads video frames from a video file.
 - Runs object detection using a pretrained YOLO model to detect hands, scoopers, pizza, and people.
 - Publishes detection results (bounding boxes, classes, confidence) to RabbitMQ queue `detection`.
 
-### 2. Violation Detection Service (`violation.py`)
+### 2. Violation Detection Service (`violationn_service.py`)
 - Subscribes to detection results from RabbitMQ.
 - Applies violation rules based on whether a hand is inside an ROI and holding a scooper.
 - Counts and logs violations.
@@ -56,6 +56,6 @@ Detailed logs printed in console.
 Tracking via SORT is ready but not fully integrated yet.
 Dockerization and dedicated frame reader service are future improvements.
 
-
 ## Demo Video
-Watch the demo video here: (https://drive.google.com/file/d/1MZpkFFc-p88p5YcnwHo0SLVCRo50eNO0/view?usp=sharing))
+Watch the demo video here: 
+(https://drive.google.com/file/d/1MZpkFFc-p88p5YcnwHo0SLVCRo50eNO0/view?usp=sharing))
